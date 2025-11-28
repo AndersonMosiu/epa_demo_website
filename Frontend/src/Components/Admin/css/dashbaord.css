@@ -1,0 +1,600 @@
+/* Custom CSS Variables */
+:root {
+  --primary-blue: #01B0F1;
+  --primary-dark: #000083;
+  --accent-red: #FE0000;
+  --accent-gold: #A07901;
+  --text-dark: #000000;
+  --text-light: #FFFFFF;
+  --bg-light: #f8f9fa;
+  --border-light: #e9ecef;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Admin Dashboard Specific Styles - Scoped to admin components */
+.admin-dashboard {
+  background-color: var(--bg-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*====Admin Header=====*/
+.admin-dashboard-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+}
+
+.admin-dashboard-header h4 {
+  color: var(--text-light);
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-dashboard .btn-logout {
+  background: var(--accent-red);
+  border-radius: 2rem;
+  border: none;
+  color: var(--text-light);
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+.admin-dashboard .btn-logout:hover {
+  background-color: #FFFFFF;
+  color: var(--accent-red);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Main Container */
+.admin-overview-row3 {
+  background-color: transparent;
+  min-height: calc(100vh - 80px);
+}
+
+.admin-overview-row9 {
+  background-color: transparent;
+}
+
+/* Sidebar Navigation */
+.admin-dashboard .list-group {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.admin-dashboard .list-group-item {
+  border: none;
+  padding: 1rem 1.25rem;
+  background-color: white;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-dashboard .list-group-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.admin-dashboard .list-group-item:hover {
+  background-color: #f1f3f4;
+  transform: translateX(5px);
+}
+
+.admin-dashboard .list-group-item.active {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  border: none;
+  color: white;
+}
+
+/* Cards */
+.admin-dashboard .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.admin-dashboard .card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.admin-dashboard .card-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+}
+
+.admin-dashboard .card-body {
+  padding: 1.5rem;
+}
+
+/* Custom Buttons - Scoped to admin dashboard */
+.admin-dashboard .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.admin-dashboard .btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.admin-dashboard .btn-primary {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #007bff 100%);
+  color: white;
+}
+
+.admin-dashboard .btn-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+}
+
+.admin-dashboard .btn-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
+}
+
+.admin-dashboard .btn-warning {
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+  color: #212529;
+}
+
+.admin-dashboard .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.admin-dashboard .btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Form Controls with Floating Labels - Scoped */
+.admin-dashboard .form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.admin-dashboard .form-control {
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1rem 0.75rem 0.5rem;
+  height: calc(3.5rem + 2px);
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.admin-dashboard .form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(1, 176, 241, 0.25);
+  background-color: white;
+}
+
+.admin-dashboard .form-label {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0 0.25rem;
+  background: transparent;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+.admin-dashboard .form-control:focus + .form-label,
+.admin-dashboard .form-control:not(:placeholder-shown) + .form-label {
+  top: 0.25rem;
+  transform: translateY(0);
+  font-size: 0.75rem;
+  color: var(--primary-blue);
+  background-color: white;
+  z-index: 1;
+}
+
+/* Textarea specific styles */
+.admin-dashboard textarea.form-control {
+  height: auto;
+  min-height: 120px;
+  padding-top: 1.5rem;
+}
+
+.admin-dashboard textarea.form-control + .form-label {
+  top: 1rem;
+  transform: none;
+}
+
+.admin-dashboard textarea.form-control:focus + .form-label,
+.admin-dashboard textarea.form-control:not(:placeholder-shown) + .form-label {
+  top: 0.25rem;
+  transform: none;
+}
+
+/* Checkbox Styles */
+.admin-dashboard .form-check {
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard .form-check-input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: -2.5rem;
+  margin-top: 0.2rem;
+  border: 2px solid var(--border-light);
+}
+
+.admin-dashboard .form-check-input:checked {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.admin-dashboard .form-check-label {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Invalid state for form groups with floating labels */
+.form-group .is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.form-group .is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+.invalid-feedback.d-block {
+  display: block;
+}
+
+/* Ensure the floating labels work with validation states */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-group .form-control.is-invalid {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 3.6.4.4.4-.4'/%3e%3cpath d='M6 7v1'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  padding-right: calc(1.5em + 0.75rem);
+}
+
+/* List Group Items for News/Events */
+.admin-dashboard .list-group-item {
+  border-radius: 8px !important;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border-light) !important;
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard .list-group-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Badges */
+.admin-dashboard .badge {
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+}
+
+/* Image Previews */
+.admin-dashboard .img-thumbnail {
+  border-radius: 8px;
+  border: 2px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard .img-thumbnail:hover {
+  border-color: var(--primary-blue);
+}
+
+/* File Input */
+.admin-dashboard .form-control[type="file"] {
+  padding: 0.75rem;
+  height: auto;
+}
+
+.admin-dashboard .form-control[type="file"]:focus + .form-label {
+  top: -0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Loading State */
+.admin-dashboard .loading-text {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Modal Styles - Scoped to admin dashboard */
+.admin-dashboard .modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-hover);
+}
+
+.admin-dashboard .modal-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  border: none;
+}
+
+.admin-dashboard .modal-title {
+  font-weight: 600;
+}
+
+.admin-dashboard .modal-body {
+  padding: 1.5rem;
+}
+
+.admin-dashboard .modal-footer {
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+/* Toast Styles - Scoped to admin dashboard */
+.admin-dashboard .toast {
+  border-radius: 8px;
+  box-shadow: var(--shadow-hover);
+  margin-bottom: 0.5rem;
+  min-width: 300px;
+}
+
+.admin-dashboard .toast.show {
+  opacity: 1;
+}
+
+.admin-dashboard .toast-body {
+  padding: 0.75rem;
+  font-weight: 500;
+}
+
+/* Animation for toast entrance */
+@keyframes adminSlideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.admin-dashboard .toast {
+  animation: adminSlideInRight 0.3s ease-out;
+}
+
+/* Backdrop for modal */
+.admin-dashboard .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-dashboard-header h4 {
+    font-size: 1.25rem;
+  }
+  
+  .admin-dashboard .btn-logout {
+    padding: 0.375rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .admin-dashboard .list-group-item {
+    padding: 0.75rem 1rem;
+  }
+  
+  .admin-dashboard .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Ensure hero buttons maintain their original styles */
+.hero-buttons .btn-hero-primary {
+  background-color: #FE0000;
+  border-color: #FE0000;
+  padding: 0.75rem 2rem;
+}
+
+.hero-buttons .btn-hero-outline-primary {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+}
+
+.hero-buttons .btn-hero-outline-primary:hover {
+  background-color: #FFFFFF;
+  color: #000083;
+}
+
+/* Reset any admin styles that might affect hero buttons */
+.hero-buttons .btn,
+.hero-buttons .btn-hero-primary,
+.hero-buttons .btn-hero-outline-primary {
+  border-radius: initial;
+  font-weight: initial;
+  padding: 0.75rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  border: initial;
+  background: initial;
+  color: initial;
+  transition: initial;
+}
+
+.hero-buttons .btn:hover,
+.hero-buttons .btn-hero-primary:hover,
+.hero-buttons .btn-hero-outline-primary:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* Modal Styles */
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-hover);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  border: none;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+/* Toast Styles */
+.toast {
+  border-radius: 8px;
+  box-shadow: var(--shadow-hover);
+  margin-bottom: 0.5rem;
+  min-width: 300px;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.toast-body {
+  padding: 0.75rem;
+  font-weight: 500;
+}
+
+/* Animation for toast entrance */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* Backdrop for modal */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Admin Dashboard Logout Icon Styles */
+.admin-logout-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* Static SVG icon - use mask instead of filter */
+.admin-logout-icon-static {
+    -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="430" height="430" fill="none" viewBox="0 0 430 430"><g stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="12"><path stroke="black" d="m270.7 187.6 8 6.5 32.4 26.5h37.5"/><path stroke="black" d="M348.6 191.5h-25.4l-63.4-48.3-31 33.9-33.8 37"/><path stroke="black" d="M107.9 322.1V375h240.7V55H107.9v228.8"/><path stroke="black" d="M278.7 194.1 238.9 243m-10.1-65.9h-35.9L164 209.8c-8.6 9.7-23.4 10.8-33.3 2.3l-2.8-2.4 57-66.5h75"/><path stroke="black" d="m237.3 241.9 38.5 29.9c8.6 6.7 13.6 16.9 13.6 27.8v48.7l19 26.9h-53.3v-73.9l-48.3-27.6"/><path stroke="black" d="m238.9 243-72.6 69.4c-6.5 6.3-15.2 9.7-24.3 9.7H50c0-21.2 17.2-38.4 38.4-38.4h56.1L195 214zm62-97.6-16.1-11.3c-7.4-5.2-9.3-15.5-4.1-22.9l14.5-20.7c5.2-7.4 15.5-9.3 22.9-4.1l2.7 1.9c7.4 5.2 9.3 15.5 4.1 22.9zm-11.5 202.9h-34.3M93.5 283.8v38.3"/></g></svg>');
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="430" height="430" fill="none" viewBox="0 0 430 430"><g stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="12"><path stroke="black" d="m270.7 187.6 8 6.5 32.4 26.5h37.5"/><path stroke="black" d="M348.6 191.5h-25.4l-63.4-48.3-31 33.9-33.8 37"/><path stroke="black" d="M107.9 322.1V375h240.7V55H107.9v228.8"/><path stroke="black" d="M278.7 194.1 238.9 243m-10.1-65.9h-35.9L164 209.8c-8.6 9.7-23.4 10.8-33.3 2.3l-2.8-2.4 57-66.5h75"/><path stroke="black" d="m237.3 241.9 38.5 29.9c8.6 6.7 13.6 16.9 13.6 27.8v48.7l19 26.9h-53.3v-73.9l-48.3-27.6"/><path stroke="black" d="m238.9 243-72.6 69.4c-6.5 6.3-15.2 9.7-24.3 9.7H50c0-21.2 17.2-38.4 38.4-38.4h56.1L195 214zm62-97.6-16.1-11.3c-7.4-5.2-9.3-15.5-4.1-22.9l14.5-20.7c5.2-7.4 15.5-9.3 22.9-4.1l2.7 1.9c7.4 5.2 9.3 15.5 4.1 22.9zm-11.5 202.9h-34.3M93.5 283.8v38.3"/></g></svg>');
+    background-color: white; /* White by default */
+}
+
+/* Animated GIF - keep as image but ensure visibility */
+.admin-logout-icon-animated {
+    filter: brightness(0) invert(1); /* Makes GIF white */
+}
+
+/* Hover state - change static icon color to #01B0F1 */
+.btn-logout:hover .admin-logout-icon-static {
+    background-color: var(--primary-blue) !important; /* #01B0F1 on hover */
+    transform: scale(1.1);
+}
+
+/* Animation for logout process */
+.btn-logout.logging-out {
+    background-color: rgba(254, 0, 0, 0.8) !important;
+    cursor: not-allowed;
+}
+
+.btn-logout.logging-out .admin-logout-icon-animated {
+    animation: admin-pulse 1s infinite;
+}
+
+@keyframes admin-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments for logout icons */
+@media (max-width: 768px) {
+    .admin-logout-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+    }
+}

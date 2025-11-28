@@ -1,0 +1,39 @@
+:root {
+  --primary-blue: #01B0F1;
+  --primary-dark: #000083;
+  --accent-red: #FE0000;
+  --accent-gold: #A07901;
+  --text-dark: #000000;
+  --text-light: #FFFFFF;
+   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.admissions{
+    height: 100vh;
+    margin-top: 2rem;
+}
+.admissions h1{
+    color: var(--accent-gold);
+    font-weight: 700;
+    text-align: center;
+
+}
+.admissions p{
+    text-align: center;
+    font-size: large;
+}
+.admissions .info{
+    box-shadow: var(--shadow);
+}
+.admissions .info h3{
+    text-align: center;
+}
+.admissions .info ul{
+    list-style: none;
+    color: var(--primary-blue)
+}
+.admissions .quick-actions{
+    box-shadow: var(--shadow);
+}
+.admissions .quick-actions ul{
+    list-style: none;
+}
